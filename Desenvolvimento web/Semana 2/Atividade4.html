@@ -1,0 +1,38 @@
+<!--Coloque aqui o CÓDIGO de um formulário HTML no qual o usuário possa inserir os seguintes dados:
+
+Nome
+E-mail
+CPF
+Senha (Usar o input type="password")
+Relacionamento (Usar o input type="radio" => Solteiro; Relacionamento Sério; Casado)
+Disciplinas com Afinidade (Usar o input type="checkbox" => Colocar as 6 disciplinas cursadas no Módulo I do nosso Curso Técnico em Informática EaD)
+Botão para Resetar os Dados
+Botão para Envio do Formulário-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title> Formulário em HTML </title>
+    </head>
+
+    <body>
+        <form method="GET" action="cadastro.php" name="form1">
+            Nome: <input type="text" name="campo_nome"> <br>
+            E-mail: <input type="text" name="campo_E-mail"> <br>
+            CPF: <input type="text" name="campo_CPF"> <br>
+            Senha: <input type="password" name="campo_senha"><br>
+            Relacionamento: <input type="radio" name="campo_Relacionamento" > Solteiro
+                            <input type="radio" name="campo_Relacionamento" > Relacionamento Sério
+                            <input type="radio" name="campo_Relacionamento" > Casado <br>
+            Disciplinas com Afinidade:  <input type="checkbox" name="campo_conhecimentos[]" value="Ambientação"> Ambientação
+                                        <input type="checkbox" name="campo_conhecimentos[]" value="Montagem e Manutenção de Computadores"> Montagem e Manutenção de Computadores
+                                        <input type="checkbox" name="campo_conhecimentos[]" value="Organização de Computadores"> Organização de Computadores
+                                        <input type="checkbox" name="campo_conhecimentos[]" value="Programas Aplicativos"> Programas Aplicativos
+                                        <input type="checkbox" name="campo_conhecimentos[]" value="Sistemas Operacionais"> Sistemas Operacionais
+                                        <input type="checkbox" name="campo_conhecimentos[]" value="Softwares Utilitários"> Softwares Utilitários <br>
+            <input type="reset" value="Limpar dados">
+            <input type="submit" value="Enviar">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+input [type="text"]{
+    width:50%;
+}
+
+input{
+    border: 2px solid black;
+}
+
+input[type="submit"]:focus{
+    background-color: blue;
+}
+
+
+img{
+    width: 50%;
+    height: 50%;
+    border-radius: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

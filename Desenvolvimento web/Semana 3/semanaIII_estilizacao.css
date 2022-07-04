@@ -1,0 +1,18 @@
+input[type="text"]{
+	width: 100%;
+}
+
+input{
+	border: 2px solid red;
+}
+
+input[type="password"]{
+	background-color: black;
+	color: red;
+}
+
+input[type="submit"]:focus{
+	background-color: yellow;
+}
+
+

@@ -1,0 +1,15 @@
+/*Crie uma regra CSS para formatação de parágrafos (<p>) seguindo as instruções abaixo:
+
+Cor do texto: azul;
+Tamanho da fonte: 25pt;
+Texto em negrito e todo em maiúsculo;
+Fonte: Verdana.*/
+
+
+p{
+    color: blue;
+    font-size: 25pt;
+    font-family: Verdana;
+    font-weight: bold;
+    text-transform: uppercase;
+}

@@ -1,0 +1,14 @@
+table, th, td{
+    border: 1px solid white;
+}
+
+table{
+    border-collapse: collapse;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    vertical-align: bottom;
+    background-color: black;
+    color: green;
+}
+
