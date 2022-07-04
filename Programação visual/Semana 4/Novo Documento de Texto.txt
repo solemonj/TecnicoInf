@@ -1,0 +1,10 @@
+Tabela Sorteada: 
+
+Ator
+Atributos:
+
+Código
+Nome
+Ano nascimento
+Signo
+Sexo
