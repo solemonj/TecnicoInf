@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-		giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+ 
+<body onload="carregou()">
+
+    <div class="container-fluid" style="padding: 0px 20%">
+         <form name="formulario1">
+            <div class="form-group">
+                <label for="fname">Nome</label>
+                <input type="text" name="fname" id="fname" class="form-control" onchange="maiuscula(id)">
+
+                <label for="cpf">CPF</label>
+                <input type="number" name="cpf" id="cpf" class="form-control" >
+
+                <label for="bday">Ano de Nascimento</label>
+                <input type="number" name="bday" id="bday" class="form-control">
+
+                <label for="address">Endereço</label>
+                <input type="text" name="address" id="address" class="form-control" onchange="maiuscula(id)">
+
+                <label for="eaddress">Estado</label>
+                <input type="text" name="eaddress" id="eaddress" class="form-control" onchange="maiuscula(id)">
+
+                <label for="caddress">Cidade</label>
+                <input type="text" name="caddress" id="caddress" class="form-control" onchange="maiuscula(id)">
+
+                <label for="tel">Telefone</label>
+                <input type="number" name="tel" id="tel" class="form-control">
+
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" class="form-control">
+
+                <label for="csenha">Confirme sua senha</label>
+                <input type="password" name="csenha" id="csenha" class="form-control">
+            </div>
+
+            <input type="submit" value="Cadastrar" onclick="return validarDados()">
+      </form>
+    </div>
+   
+
+
+
+    <script>
+            //alert ("Bem vindo ao formulário de cadastro!");
+            function carregou(){
+                alert ("Bem vindo ao formulário de cadastro!");
+            };
+
+
+            function maiuscula(id){
+                var x=document.getElementById(id);
+                x.value=x.value.toUpperCase();
+            };
+
+            function validarDados(){
+                var fname = formulario1.fname.value;
+                var cpf = formulario1.cpf.value;
+                var bday = formulario1.bday.value;
+                var address = formulario1.address.value;
+                var eaddress = formulario1.eaddress.value;
+                var caddress = formulario1.caddress.value;
+                var tel = formulario1.tel.value;
+                var senha = formulario1.senha.value;
+                var csenha = formulario1.csenha.value;
+
+
+				if(fname.length == 0 || cpf.length == 0 || bday.length == 0 || address.length == 0 || eaddress.length == 0 ||caddress.length == 0 || tel.length == 0 || senha.length == 0 || csenha.length == 0 ){
+					alert("Nenhum campo deve estar vazio!");
+				    formulario1.senha.focus();
+                    return false;
+					
+                    
+				}
+
+                if(senha == fname){
+                    alert("Sua senha não pode ser igual ao seu nome")
+                    return false;
+                }
+
+                if (senha !== csenha){
+                    alert("As senhas estão diferentes")
+                    return false;
+                }
+
+                if(bday == 2022 || bday<0){
+                    alert("Insina um ano de nascimento válido")
+                    return false;
+                }
+
+                
+            }
+            
+
+    </script>
+    
+</body>
+</html>
